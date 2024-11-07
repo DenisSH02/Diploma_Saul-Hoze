@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Геопортал Моніторингу лісового покриву Харківської області</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="files/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="files/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="files/favicon-16x16.png">
+  <link rel="manifest" href="files/site.webmanifest">
+ 
+
+  
+
+</head>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e7fddf;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="http://127.0.0.1:5500/main.html#">
+      <img src="pictures/logo.png" alt="Лого" style="height: 40px; margin-right: 10px;">
+      Геопортал Моніторингу лісового покриву Харківської області
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav me-auto align-items-center"> <!-- Убедитесь, что все элементы выровнены по центру -->
+        <a class="nav-link" aria-current="page" href="http://127.0.0.1:5500/main.html?">Головна сторінка</a>
+        <a class="nav-link" href="data.html">Практичне застосування</a>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Моніторинг лісовтрат Харківської області
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="https://ee-denchikandrienko.projects.earthengine.app/view/loggingkharkov">Моніторинг від GEE</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/arcgis.html">Моніторинг від ArcGIS Online</a></li>
+          </ul>
+        </div>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+      </div>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Я шукаю..." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Пошук</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Информация о сайте</title>
+  <style>
+    /* Container styling */
+    .curved-container {
+      width: 100%; /* Full width */
+      padding: 90px 30px; /* Increased padding for height */
+      text-align: center; /* Center text */
+      border-radius: 0 0 50% 50%; /* Curved bottom */
+      background-color: #eef9ea; /* Light background color */
+      background-image: url('pictures/vvvv.jpg'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      color: #ffffff; /* White text color for readability */
+      margin: 0; /* Removes any default margin */
+    }
+
+    /* Title styling */
+    .curved-container .info-title {
+      font-size: 32px;
+      font-weight: 900; /* Extra bold title */
+      color: #ffffff; /* White title color */
+      margin-bottom: 20px;
+    }
+
+    /* Text styling */
+    .curved-container .info-text {
+      font-size: 18px;
+      color: #f0f0f0; /* Slightly off-white for better contrast */
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Curved container -->
+  <div class="curved-container">
+    <h5 class="info-title">Вітаємо на Геопорталі Моніторингу лісового покриву Харківської області!</h5>
+    <p class="info-text">
+      Запрошуємо Вас дослідити Геопортал  та скористатися представленими картографічними моделями аналізу та візуалізації даних знеліснення.<br>Основна мета цього проекту — підвищення обізнаності проблеми знеліснення та надання доступу до важливих даних для прийняття рішень у сфері охорони навколишнього середовища.<br>Разом ми можемо працювати над збереженням лісів України!
+    </p>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+<!-- Блок с картами под заголовками -->
+<div class="container mt-4">
+  <div class="row">
+      <!-- Карта для "Теоретичні відомості" -->
+      <div class="col-md-4 d-flex">
+          <div class="card-custom card">
+              <img src="pictures/ticket.png" class="card-img-top-custom" alt="Лісорубні квитки">
+              <div class="card-body">
+                  <h5 class="card-title">Лісорубні квитки</h5>
+                  <p class="card-text">Лісорубний квиток є офіційним документом, що дозволяє проведення робіт з вирубки дерев у певній ділянці лісу. Отримання квитка регламентується державними органами з охорони навколишнього середовища. Завдяки цьому інструменту можна відстежувати законність вирубки та здійснювати моніторинг використання природних ресурсів.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <!-- Добавляем кнопку -->
+                  <a href="https://lk.ukrforest.com/forest-tickets/" target="_blank" class="btn btn-primary">Докладніше...</a>
+              </div>
+          </div>
+      </div>
+
+      <!-- Карта для "Методичні вказівки" -->
+      <div class="col-md-4 d-flex">
+          <div class="card-custom card">
+              <img src="pictures/bazadanix.png" class="card-img-top-custom" alt="Методичні вказівки">
+              <div class="card-body">
+                  <h5 class="card-title">Дані дослідження</h5>
+                  <p class="card-text">Визначення полігонів знеліснення за допомогою даних ДЗЗ дало змогу зібрати базу даних, що може слугувати основою для подальшого дослідження із багаторічного моніторингу стану лісового покриву Харківської області.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <!-- Добавляем кнопку -->
+                  <a href="data.html" target="_blank"class="btn btn-primary">Докладніше...</a>
+              </div>
+          </div>
+      </div>
+
+      <!-- Карта для "Корисна література" -->
+      <div class="col-md-4 d-flex">
+        <div class="card-custom card">
+            <img src="pictures/literatura.png" class="card-img-top-custom" alt="Корисна література">
+            <div class="card-body">
+                <h5 class="card-title">Корисна література</h5>
+                <p class="card-text">Для створення Геопорталу моніторингу лісового покриву Харківської області було досліджено технічну документацію та практично реалізовано елементи ресурсної бази додатків Google Earth Engine та ArcGIS Online. За посиланнями нижче розміщено посібники з обробки просторової інформації у WEB-просторі.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <!-- Добавляем кнопки в Flex-контейнер для выравнивания -->
+                <div class="d-flex flex-column">
+                    <a href="https://www.esri.com/en-us/arcgis/products/arcgis-online/resources" target="_blank" class="btn btn-primary mb-2">Tutorials ArcGIS Online</a>
+                    <a href="https://developers.google.com/earth-engine/datasets/" target="_blank" class="btn btn-secondary">Tutorials Google Earth Engine</a>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+
+
+
+
+      <div class="row mt-5" style="margin: 0 30px;">
+        <div class="col-sm-6 d-flex">
+          <div class="card flex-fill d-flex flex-column">
+            <div class="card-body d-flex flex-grow-1 flex-column">
+              <h5 class="card-title">Картографічна модель візуалізації лісовтрат у GEE</h5>
+              <p class="card-text">Датасет HANSEN GFC_2023 року дає можливість розробникам в Google Earth Engine візуалізувати картографічні рішення явища знеліснення. За посиланням користувач може знайти ...</p>
+              <div class="mt-auto"> <!-- Это добавляет пространство между текстом и кнопкой -->
+                <a href="https://ee-denchikandrienko.projects.earthengine.app/view/loggingkharkov" target="_blank" class="btn btn-primary">До карти Google Earth Engine...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 d-flex">
+          <div class="card flex-fill d-flex flex-column">
+            <div class="card-body d-flex flex-grow-1 flex-column">
+              <h5 class="card-title">Картографічна модель візуалізації втрат лісу за допомогою ArcGIS Online</h5>
+              <p class="card-text">За допомогою онлайн-платформи обробки геоданих ArcGIS було розроблено картографічне рішення визначення зон знеліснення ...</p>
+              <div class="mt-auto"> <!-- Это добавляет пространство между текстом и кнопкой -->
+                <a href="http://127.0.0.1:5500/arcgis.html" target="_blank" class="btn btn-primary">До карти ArcGIS Online...</a>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+      
+
+
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start mt-4">
+  <div class="container-fluid p-4">
+    <div class="row">
+      <!-- Контактная информация -->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Інформація про розробника</h5>
+        <ul class="list-unstyled mb-0">
+          <li>
+            <p>Розроблено студентом Національного Аерокосмічного Університету ім. М. Є. Жуковського "ХАІ" групи 462м Саул-Гозе Д. К.<br>Науковий керівник: к. т. н., доц. каф. 407<br>Горелик С. І.</p>
+
+          </li>
+          <li>
+            <p>Номер телефона: +38 (096) 938-80-02</p>
+          </li>
+          <li>
+            <p>Email: <a href="mailto:denis@example.com">d.k.saulhoze@student.khai.edu</a></p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Форма обратной связи -->
+      <div class="col-lg-8 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Зворотній зв'язок</h5>
+        <form>
+          <div class="form-group mb-3">
+            <label for="name">Ваше ім'я</label>
+            <input type="text" class="form-control" id="name" placeholder="Введіть ваше ім'я">
+          </div>
+          <div class="form-group mb-3">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Введіть ваш email">
+          </div>
+          <div class="form-group mb-3">
+            <label for="message">Повідомлення</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Введіть ваше повідомлення"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Надіслати</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: #e3f2fd;">
+    © 2024 Developed with the assistance of the Kharkiv National Aerospace University named after M.E. Zhukovsky “KhAI”
+  </div>
+</footer>
+
+
+
+
+
+<script src="js/bootstrap.bundle.js"></script>
+</html>
+      

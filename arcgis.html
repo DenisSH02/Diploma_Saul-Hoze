@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моніторинг лісового покриву у ArcGIS Online</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="files/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="files/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="files/favicon-16x16.png">
+  <link rel="manifest" href="files/site.webmanifest">
+  
+
+</head>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e7fddf;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="http://127.0.0.1:5500/main.html#">
+      <img src="pictures/logo.png" alt="Лого" style="height: 40px; margin-right: 10px;">
+      Геопортал Моніторингу лісового покриву Харківської області
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav me-auto align-items-center"> <!-- Убедитесь, что все элементы выровнены по центру -->
+        <a class="nav-link" aria-current="page" href="http://127.0.0.1:5500/main.html?">Головна сторінка</a>
+        <a class="nav-link" href="data.html">Практичне застосування</a>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Моніторинг лісовтрат Харківської області
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="https://ee-denchikandrienko.projects.earthengine.app/view/loggingkharkov">Моніторинг від GEE</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/arcgis.html">Моніторинг від ArcGIS Online</a></li>
+          </ul>
+        </div>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+      </div>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Я шукаю..." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Пошук</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Саул-Гозе_462м_Лес" src="//www.arcgis.com/apps/Embed/index.html?webmap=3f5881d6f71e4105921fa0f780eea1cb&extent=35.2228,49.255,38.461,50.2926&zoom=true&previewImage=false&scale=true&legendlayers=true&disable_scroll=true&theme=light"></iframe></div>
+
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start mt-4">
+  <div class="container-fluid p-4">
+    <div class="row">
+      <!-- Контактная информация -->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Інформація про розробника</h5>
+        <ul class="list-unstyled mb-0">
+          <li>
+            <p>Розроблено студентом Національного Аерокосмічного Університету ім. М. Є. Жуковського "ХАІ" групи 462м Саул-Гозе Д. К.<br>Науковий керівник: к. т. н., доц. каф. 407<br>Горелик С. І.</p>
+
+          </li>
+          <li>
+            <p>Номер телефона: +38 (096) 938-80-02</p>
+          </li>
+          <li>
+            <p>Email: <a href="mailto:denis@example.com">d.k.saulhoze@student.khai.edu</a></p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Форма обратной связи -->
+      <div class="col-lg-8 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Зворотній зв'язок</h5>
+        <form>
+          <div class="form-group mb-3">
+            <label for="name">Ваше ім'я</label>
+            <input type="text" class="form-control" id="name" placeholder="Введіть ваше ім'я">
+          </div>
+          <div class="form-group mb-3">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Введіть ваш email">
+          </div>
+          <div class="form-group mb-3">
+            <label for="message">Повідомлення</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Введіть ваше повідомлення"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Надіслати</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: #e3f2fd;">
+    © 2024 Developed with the assistance of the Kharkiv National Aerospace University named after M.E. Zhukovsky “KhAI”
+  </div>
+</footer>
+
+<script src="js/bootstrap.bundle.js"></script>
+</html>

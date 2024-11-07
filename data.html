@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Геопортал Моніторингу лісового покриву Харківської області</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="files/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="files/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="files/favicon-16x16.png">
+  <link rel="manifest" href="files/site.webmanifest">
+ 
+
+  
+
+</head>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e7fddf;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="http://127.0.0.1:5500/main.html#">
+      <img src="pictures/logo.png" alt="Лого" style="height: 40px; margin-right: 10px;">
+      Геопортал Моніторингу лісового покриву Харківської області
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav me-auto align-items-center"> <!-- Убедитесь, что все элементы выровнены по центру -->
+        <a class="nav-link" aria-current="page" href="http://127.0.0.1:5500/main.html?">Головна сторінка</a>
+        <a class="nav-link" href="data.html">Практичне застосування</a>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Моніторинг лісовтрат Харківської області
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="https://ee-denchikandrienko.projects.earthengine.app/view/loggingkharkov">Моніторинг від GEE</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:5500/arcgis.html">Моніторинг від ArcGIS Online</a></li>
+          </ul>
+        </div>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+      </div>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Я шукаю..." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Пошук</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Графік даних</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Подключаем Chart.js -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="mt-5 text-center">Графік втрат лісу за роками</h2>
+        <canvas id="myChart" width="400" height="200"></canvas> <!-- Место для графика -->
+    </div>
+    
+
+<script>
+    // Данные
+    const years = [
+        2000, 2001, 2002, 2003, 2004, 
+        2005, 2006, 2007, 2008, 2009, 
+        2010, 2011, 2012, 2013, 2014, 
+        2015, 2016, 2017, 2018, 2019, 
+        2020, 2021, 2022, 2023
+    ];
+
+    const values = [
+        0, 
+        760.4154127815995,
+        867.3438996203613,
+        771.7465707620778,
+        1013.9250402501004,
+        1127.5114971670114,
+        1223.6330068147072,
+        1512.2231164031384,
+        971.0325365152516,
+        2906.032844967664,
+        984.3003487470081,
+        1587.6667580620979,
+        1162.5085440173102,
+        835.5842860227577,
+        881.4644822935097,
+        938.5755455063284,
+        2570.978229761364,
+        1416.3183056155217,
+        1755.1135471462355,
+        1051.0371196335498,
+        1062.0924821270394,
+        1516.610839511982,
+        1881.2636516040277,
+        5210.533068211382
+    ];
+
+    // Создание графика
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'line', // Тип графика: линейный
+        data: {
+            labels: years, // Подписи по оси X
+            datasets: [{
+                label: 'Втрати лісу (у гектарах)', // Подпись для линии
+                data: values, // Данные для графика
+                borderColor: 'rgba(75, 192, 192, 1)', // Цвет линии
+                backgroundColor: 'rgba(75, 192, 192, 0.2)', // Цвет фона области
+                borderWidth: 2, // Ширина линии
+                fill: true // Заполнение области под линией
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true // Начинать ось Y с нуля
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
+
+
+
+<!-- На скачку данных -->
+<div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">Завантаж дані площ полігонів знеліснення</h5>
+      <p class="card-text">За посиланням на Google Disc Ви, як користувач або розробник ГІС-додатків, можете завантажити дані площ лісовирублення.<br>Також розробники або спеціалісти з проектування БД можути залишити свої дані на отримання повної бази даних дослідження. </p>
+      <a href="https://drive.google.com/drive/folders/1KGJAeB46HBCVYK2I74v5GikGiVw-s9Zj?hl=ru" target="_blank" class="btn btn-primary">Завантажити .TIFF</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSemacswM0o93ryTDaPEU68DIqL437R7h8gt-Uz-p7E88JBdYw/viewform?usp=sf_link" target="_blank" class="btn btn-primary">Залишити контактні дані у Google Forms</a>
+    </div>
+    <div class="card-footer text-muted">
+      2 days ago
+    </div>
+  </div>
+
+  
+  
+  
+
+
+
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start mt-4">
+    <div class="container-fluid p-4">
+      <div class="row">
+        <!-- Контактная информация -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Інформація про розробника</h5>
+          <ul class="list-unstyled mb-0">
+            <li>
+              <p>Розроблено студентом Національного Аерокосмічного Університету ім. М. Є. Жуковського "ХАІ" групи 462м Саул-Гозе Д. К.<br>Науковий керівник: к. т. н., доц. каф. 407<br>Горелик С. І.</p>
+  
+            </li>
+            <li>
+              <p>Номер телефона: +38 (096) 938-80-02</p>
+            </li>
+            <li>
+              <p>Email: <a href="mailto:denis@example.com">d.k.saulhoze@student.khai.edu</a></p>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Форма обратной связи -->
+        <div class="col-lg-8 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Зворотній зв'язок</h5>
+          <form>
+            <div class="form-group mb-3">
+              <label for="name">Ваше ім'я</label>
+              <input type="text" class="form-control" id="name" placeholder="Введіть ваше ім'я">
+            </div>
+            <div class="form-group mb-3">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Введіть ваш email">
+            </div>
+            <div class="form-group mb-3">
+              <label for="message">Повідомлення</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Введіть ваше повідомлення"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Надіслати</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: #e3f2fd;">
+      © 2024 Developed with the assistance of the Kharkiv National Aerospace University named after M.E. Zhukovsky “KhAI”
+    </div>
+  </footer>
+  
+  
+  
+  
+  
+  <script src="js/bootstrap.bundle.js"></script>
+  </html>
