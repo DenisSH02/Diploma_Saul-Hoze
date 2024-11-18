@@ -67,28 +67,33 @@
         </ul>
       </div>
 
-      <!-- Форма обратной связи -->
-      <div class="col-lg-8 col-md-6 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Зворотній зв'язок</h5>
-        <form>
-          <div class="form-group mb-3">
-            <label for="name">Ваше ім'я</label>
-            <input type="text" class="form-control" id="name" placeholder="Введіть ваше ім'я">
-          </div>
-          <div class="form-group mb-3">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Введіть ваш email">
-          </div>
-          <div class="form-group mb-3">
-            <label for="message">Повідомлення</label>
-            <textarea class="form-control" id="message" rows="3" placeholder="Введіть ваше повідомлення"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Надіслати</button>
-          
-        </form>
-      </div>
+ <!-- Форма обратной связи -->
+<div class="col-lg-8 col-md-6 mb-4 mb-md-0">
+  <h5 class="text-uppercase">Зворотній зв'язок</h5>
+  <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+    <!-- Добавляем ключ API -->
+    <input type="hidden" name="access_key" value="00d009d6-f384-472d-87e5-00bc49c7595f">
+    <div class="form-group mb-3">
+      <label for="name">Ваше ім'я</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Введіть ваше ім'я" required>
     </div>
-  </div>
+    <div class="form-group mb-3">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Введіть ваш email" required>
+    </div>
+    <div class="form-group mb-3">
+      <label for="subject">Тема повідомлення</label>
+      <input type="text" class="form-control" id="subject" name="subject" placeholder="Введіть тему повідомлення" required>
+    </div>
+    <div class="form-group mb-3">
+      <label for="message">Повідомлення</label>
+      <textarea class="form-control" id="message" name="message" rows="3" placeholder="Введіть ваше повідомлення" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Надіслати</button>
+    <!-- Скрытое поле для предотвращения спама -->
+    <input type="hidden" name="redirect" value="thank.html">
+  </form>
+</div>
 
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: #e3f2fd;">
